@@ -19,6 +19,24 @@
 
 ## 安装
 
+### 三种装法（挑一个）
+
+```bash
+# 1) 零安装，先跑一次试试（需要 node ≥ 20 和 git）
+npx github:whatxin7/dsh-qq-voice doctor
+
+# 2) 装成全局命令（日常用这个）
+npm i -g github:whatxin7/dsh-qq-voice
+
+# 3) 想改代码 / 跑测试
+git clone https://github.com/whatxin7/dsh-qq-voice.git
+cd dsh-qq-voice && npm install && npm test
+```
+
+> ⚠️ npm registry 上还没有这个包名，只能用下面的 GitHub 方式装。
+> 本项目只通过 `github:whatxin7/...` 或源码安装；以后发 npm 会用 `@whatxin7/...` scope。
+
+
 ```bash
 git clone https://github.com/whatxin7/dsh-qq-voice.git
 cd dsh-qq-voice
