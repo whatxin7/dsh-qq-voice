@@ -1,0 +1,10 @@
+﻿node_modules/
+.npm-cache/
+out/
+state/
+config.json
+*.log
+*.bak
+*.bak-*
+.DS_Store
+Thumbs.db

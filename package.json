@@ -1,0 +1,49 @@
+{
+  "name": "dsh-qq-voice",
+  "version": "1.0.0",
+  "private": false,
+  "type": "module",
+  "license": "MIT",
+  "description": "QQ 语音工具链：语音库管理、ffprobe 探测、ffmpeg 音量/响度处理、歌本点歌、OneBot v11 record 段发送。",
+  "keywords": [
+    "qq",
+    "onebot",
+    "snowluma",
+    "voice",
+    "tts",
+    "audio",
+    "ffmpeg",
+    "songbook"
+  ],
+  "engines": {
+    "node": ">=20"
+  },
+  "bin": {
+    "voice": "./bin/voice.mjs"
+  },
+  "exports": {
+    ".": "./src/voice-core.js",
+    "./core": "./src/voice-core.js",
+    "./songbook": "./src/songbook.mjs",
+    "./send": "./src/send.mjs",
+    "./conn": "./src/snowluma-conn.js"
+  },
+  "files": [
+    "bin",
+    "src",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "test": "node --test",
+    "doctor": "node bin/voice.mjs doctor"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Derpyu520/dsh-qq-voice.git"
+  },
+  "homepage": "https://github.com/Derpyu520/dsh-qq-voice#readme",
+  "bugs": {
+    "url": "https://github.com/Derpyu520/dsh-qq-voice/issues"
+  }
+}
