@@ -128,8 +128,15 @@ export function resolveAudioSource(input, { voiceDir = null, cwd = process.cwd()
  */
 export function safeJoinLibrary(voiceDir, relPath) {
   const root = path.resolve(voiceDir);
-  const rel = String(relPath ?? '').replace(/\\/g, '/').replace(/^\/+/, '');
-  if (!rel || rel.includes('\0')) return null;
+  const raw = String(relPath ?? '');
+  if (raw.includes('\0')) return null;
+  // 盘符路径（C:/x、C:\x）与 UNC（\\server\share）在**任何平台**都必须拒绝：
+  // Linux 上 path.resolve('库', 'C:/Windows/win.ini') 会落到库内的 "C:" 目录，看起来"没穿越"，
+  // 但它本来就不该被当成库内相对路径（CI 在 ubuntu 上就是这么暴露出来的）。
+  const unified = raw.replace(/\\/g, '/');
+  if (/^[a-zA-Z]:/.test(unified) || unified.startsWith('//')) return null;
+  const rel = unified.replace(/^\/+/, '');
+  if (!rel) return null;
   const abs = path.resolve(root, rel);
   const within = abs === root || abs.startsWith(root + path.sep);
   if (!within) return null;

@@ -1,4 +1,4 @@
-# dsh-qq-voice
+﻿# dsh-qq-voice
 
 > **一句话**：把「发一条 QQ 语音」拆成四件可测的事 —— 找到文件、验它能不能发、按需调音量、把 `record` 段投给 OneBot。
 >
@@ -20,7 +20,7 @@
 ## 安装
 
 ```bash
-git clone https://github.com/Derpyu520/dsh-qq-voice.git
+git clone https://github.com/whatxin7/dsh-qq-voice.git
 cd dsh-qq-voice
 node --test                 # 16 个用例
 node bin/voice.mjs doctor   # 环境体检：Node / 语音库 / 歌本 / ffmpeg / ffprobe
@@ -125,13 +125,13 @@ const result = await sendVoice({
 | 项目 | 对应成本条目 |
 |---|---|
 | **dsh-qq-voice**（本仓库） | 语音 / 唱歌 / 音色 |
-| [dsh-token-meter](https://github.com/Derpyu520/dsh-token-meter) | 用量与成本核算 |
-| [dsh-qq-access](https://github.com/Derpyu520/dsh-qq-access) | 好友 / 白名单 / 权限 |
-| [dsh-qq-stickers](https://github.com/Derpyu520/dsh-qq-stickers) | 表情包 / 斗图 |
-| [dsh-mcp-safe-tools](https://github.com/Derpyu520/dsh-mcp-safe-tools) | 能力扩展（视觉 / 搜索 / 语感） |
-| [dsh-session-link](https://github.com/Derpyu520/dsh-session-link) | 联通会话 / 行为调优 |
-| [dsh-persona-kit](https://github.com/Derpyu520/dsh-persona-kit) | 人格 / 角色卡 |
-| [qq-bridge](https://github.com/Derpyu520/qq-bridge) | 桥接内核（旗舰仓库） |
+| [dsh-token-meter](https://github.com/whatxin7/dsh-token-meter) | 用量与成本核算 |
+| [dsh-qq-access](https://github.com/whatxin7/dsh-qq-access) | 好友 / 白名单 / 权限 |
+| [dsh-qq-stickers](https://github.com/whatxin7/dsh-qq-stickers) | 表情包 / 斗图 |
+| [dsh-mcp-safe-tools](https://github.com/whatxin7/dsh-mcp-safe-tools) | 能力扩展（视觉 / 搜索 / 语感） |
+| [dsh-session-link](https://github.com/whatxin7/dsh-session-link) | 联通会话 / 行为调优 |
+| [dsh-persona-kit](https://github.com/whatxin7/dsh-persona-kit) | 人格 / 角色卡 |
+| [qq-bridge](https://github.com/whatxin7/qq-bridge) | 桥接内核（旗舰仓库） |
 
 ## English
 
@@ -139,4 +139,6 @@ A QQ voice toolkit: library scanning, `ffprobe` inspection, ffmpeg volume/R128 l
 
 ## License
 
-MIT © Derpyu520
+MIT © whatxin7
+
+

@@ -1,4 +1,4 @@
-{
+﻿{
   "name": "dsh-qq-voice",
   "version": "1.0.0",
   "private": false,
@@ -40,10 +40,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Derpyu520/dsh-qq-voice.git"
+    "url": "git+https://github.com/whatxin7/dsh-qq-voice.git"
   },
-  "homepage": "https://github.com/Derpyu520/dsh-qq-voice#readme",
+  "homepage": "https://github.com/whatxin7/dsh-qq-voice#readme",
   "bugs": {
-    "url": "https://github.com/Derpyu520/dsh-qq-voice/issues"
+    "url": "https://github.com/whatxin7/dsh-qq-voice/issues"
   }
 }
+
+
